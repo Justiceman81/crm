@@ -74,14 +74,22 @@ export default function PromotionForm({
       <Form className="flex flex-col gap-10">
         <p className="mb-0.5 text-xl">Add new promotion</p>
         <div className="flex flex-col gap-5">
-          <InputField required label="Title" placeholder="Title" name="title" />
           <InputField
+            as="input"
+            required
+            label="Title"
+            placeholder="Title"
+            name="title"
+          />
+          <InputField
+            as="textarea"
             required
             label="Description"
             placeholder="Description"
             name="description"
           />
           <InputField
+            as="input"
             required
             type="number"
             label="Discount"

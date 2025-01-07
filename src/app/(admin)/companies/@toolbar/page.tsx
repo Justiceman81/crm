@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-empty-object-type */
 import React from 'react';
 import Toolbar from '@/app/components/toolbar';
 import SearchInput from '@/app/components/search-input';
