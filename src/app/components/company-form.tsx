@@ -111,13 +111,20 @@ export default function CompanyForm({ onSubmit }: CompanyFormProps) {
             </InputField>
           </div>
           <div className="flex flex-col flex-1 gap-5">
-            <InputField required label="Name" placeholder="Name" name="title" />
+            <InputField
+              required
+              label="Name"
+              placeholder="Name"
+              name="title"
+              as="input" // Explicitly specify 'as' property
+            />
+
             <InputField
               required
               label="Category"
               placeholder="Category"
               name="categoryId"
-              as="select"
+              as="select" // Specify 'as' to render a <select> element
             >
               {categories?.map((category) => (
                 <option key={category.id} value={category.id}>
@@ -125,17 +132,21 @@ export default function CompanyForm({ onSubmit }: CompanyFormProps) {
                 </option>
               ))}
             </InputField>
+
             <InputField
               required
               label="Joined date"
               type="date"
               name="joinedDate"
+              as="input" // Explicitly render an input element
             />
+
             <InputField
               required
               label="Description"
               placeholder="Description"
               name="description"
+              as="textarea" // Explicitly render a textarea element
             />
           </div>
         </div>
